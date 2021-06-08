@@ -9,10 +9,7 @@ function App() {
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
       if(user){
-        setLoggedIn(true);
         setUserObj(user);
-      }else{
-        setLoggedIn(false);
       }
       setInit(true);  
     });
@@ -20,7 +17,7 @@ function App() {
   return (
     <>
       {init ? (
-      <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} /> 
+      <AppRouter isLoggedIn={Boolean(userObj)} userObj={userObj} /> 
       ) : (
         "Initializing..."
       )}
