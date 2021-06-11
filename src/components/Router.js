@@ -13,12 +13,12 @@ const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
                 {isLoggedIn ? (
                     <div
                         style={{
-                        maxWidth: 890,
-                        width: "100%",
-                        margin: "0 auto",
-                        marginTop: 80,
-                        display: "flex",
-                        justifyContent: "center",
+                            maxWidth: 890,
+                            width: "100%",
+                            margin: "0 auto",
+                            marginTop: 80,
+                            display: "flex",
+                            justifyContent: "center",
                         }}
                     >
                         <Route exact path="/">
